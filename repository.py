@@ -7,10 +7,10 @@ end_date = "2009-12-31"
 
 def get_data():
     return pd.read_csv(
-        r"input\small_portfolio.csv",
+        r"input\crisis_portfolio.csv",
         delimiter=",",
-        index_col="date",
-        parse_dates=["date"],
+        index_col="Date",
+        parse_dates=["Date"],
     )
 
 def get_weights() -> np.array:
