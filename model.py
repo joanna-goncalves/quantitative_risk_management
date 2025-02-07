@@ -24,6 +24,15 @@ def portfolio_cumulative_returns(
     result = returns[[new_column]]
     return (1 + result).cumprod()
 
+def portfolio_cumulative_returns_rolling_30(
+    weights: np.array, data_portfolio: pd.DataFrame
+) -> pd.DataFrame:
+    new_column = "Portfolio"
+    returns = data_portfolio.pct_change()
+    returns[new_column] = returns.dot(weights)
+    result = returns[[new_column]]
+    return (1 + returns).rolling(window=30).apply(np.prod, raw=True) - 1
+
 def portfolio_covariance(weights: np.array, data_portfolio: pd.DataFrame) -> np.float64:
     """
     Calculate expected portfolio variance
