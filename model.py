@@ -6,7 +6,7 @@ def portfolio_return(weights: np.array, data_portfolio: pd.DataFrame) -> np.floa
     """
     Calculate expected portfolio performance
     The sum of the weights must be 1
-    :param weights: weights as a vector -> np.array([0.5, 0.2, 0.2, 0.1])
+    :param weights: weights as a vector -> np.array([0.25, 0.25, 0.25, 0.25])
     :param data_portfolio: stock prices
     :return: the portfolio return
     """
@@ -28,7 +28,7 @@ def portfolio_covariance(weights: np.array, data_portfolio: pd.DataFrame) -> np.
     """
     Calculate expected portfolio variance
     The sum of the weights must be 1
-    :param weights: weights as a vector -> np.array([0.5, 0.2, 0.2, 0.1])
+    :param weights: weights as a vector -> np.array([0.25, 0.25, 0.25, 0.25])
     :param data_portfolio: stock prices
     :return: the portfolio variance
     """
@@ -41,7 +41,7 @@ def portfolio_variance(weights: np.array, data_portfolio: pd.DataFrame) -> np.fl
     """
     Calculate expected portfolio variance
     The sum of the weights must be 1
-    :param weights: weights as a vector -> np.array([0.5, 0.2, 0.2, 0.1])
+    :param weights: weights as a vector -> np.array([0.25, 0.25, 0.25, 0.25])
     :param data_portfolio: stock prices
     :return: the portfolio variance
     """
@@ -56,7 +56,7 @@ def portfolio_standard_dev(
     """
     Calculate expected portfolio standard deviation
     The sum of the weights must be 1
-    :param weights: weights as a vector -> np.array([0.5, 0.2, 0.2, 0.1])
+    :param weights: weights as a vector -> np.array([0.25, 0.25, 0.25, 0.25])
     :param data_portfolio: stock prices
     :return: the portfolio standard deviation
     """
