@@ -37,6 +37,19 @@ def portfolio_covariance(weights: np.array, data_portfolio: pd.DataFrame) -> np.
     cov_matrix = (returns.cov()) * 252
     return cov_matrix
 
+def portfolio_variance(weights: np.array, data_portfolio: pd.DataFrame) -> np.float64:
+    """
+    Calculate expected portfolio variance
+    The sum of the weights must be 1
+    :param weights: weights as a vector -> np.array([0.5, 0.2, 0.2, 0.1])
+    :param data_portfolio: stock prices
+    :return: the portfolio variance
+    """
+    np.testing.assert_almost_equal(np.sum(weights), 1)
+    returns = data_portfolio.pct_change()
+    cov_matrix = (returns.cov()) * 252
+    return np.dot(weights.T, np.dot(cov_matrix, weights))
+
 def portfolio_standard_dev(
     weights: np.array, data_portfolio: pd.DataFrame
 ) -> np.float64:
