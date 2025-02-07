@@ -13,9 +13,12 @@ def display_chart(data: pd.DataFrame, column: str, color="purple") -> None:
 
 def display_results(
     portfolio_return: np.float64,
+    portfolio_covariance : np.float64,
     portfolio_variance: np.float64,
     portfolio_standard_dev: np.float64,
 ) -> None:
-    print(f"Covariance={str(np.round(covariance, 4) * 100)}%")
-    print(f"Portfolio volatility={str(np.round(portfolio_variance, 4) * 100)}%")
+    print(f"Portfolio return={str(np.round(portfolio_return, 4) * 100)}%")
+    print(f"Covariance={str(np.round(portfolio_covariance, 4) * 100)}%")
+    print(f"Variance={str(np.round(portfolio_variance, 4) * 100)}%")
+    print(f"Portfolio volatility={str(np.round(portfolio_standard_dev, 4) * 100)}%")
 

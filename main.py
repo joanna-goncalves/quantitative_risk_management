@@ -12,11 +12,10 @@ data = get_data()
 weights = get_weights()
 
 asset_returns = portfolio_return(weights, data)
-portfolio_returns = portfolio_cumulative_returns(weights, data)
 covariance = portfolio_covariance(weights, data)
 variance = portfolio_variance(weights, data)
 volatility = portfolio_standard_dev(weights, data)
 
-display_results(portfolio_returns, covariance, variance, volatility)
+display_results(asset_returns, covariance, variance, volatility)
 
 
