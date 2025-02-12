@@ -71,3 +71,4 @@ def portfolio_standard_dev(
     """
     np.testing.assert_almost_equal(np.sum(weights), 1)
     return np.sqrt(portfolio_variance(weights, data_portfolio))
+
